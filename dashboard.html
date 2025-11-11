@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DroneFleet Manager - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="dashboard-layout"> 
+    
+    <div class="sidebar">
+        <div class="logo">DroneFleet 🚀</div>
+        <nav>
+            <ul>
+                <li class="active"><a href="#dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="#users"><i class="fas fa-users"></i> Utilizatori & Operatori</a></li>
+                <li><a href="#drones"><i class="fas fa-plane"></i> Gestiune Drone</a></li>
+                <li><a href="#missions"><i class="fas fa-route"></i> Programare Misiuni</a></li>
+                <li><a href="#maintenance"><i class="fas fa-tools"></i> Mentenanță</a></li>
+                <li><a href="#locations"><i class="fas fa-map-marker-alt"></i> Locații Bază</a></li>
+            </ul>
+        </nav>
+        
+        <div class="sidebar-footer">
+             <div class="user-info">
+                <i class="fas fa-user-circle"></i>
+                <span class="user-role">Administrator</span>
+            </div>
+             <a href="index.html" class="logout-sidebar-button" title="Deconectare">
+                <i class="fas fa-sign-out-alt"></i> Deconectare
+            </a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        
+        <section id="dashboard">
+            <header class="dashboard-header">
+                <h1>Tablou de Bord Principal</h1>
+                <input type="text" placeholder="Căutare rapidă...">
+            </header>
+
+            <section class="overview-cards">
+                <div class="card">
+                    <h2>Drone Active</h2>
+                    <p class="metric-value">50</p>
+                    <i class="fas fa-check-circle card-icon active-icon"></i>
+                </div>
+                <div class="card">
+                    <h2>Misiuni Planificate</h2>
+                    <p class="metric-value">34</p>
+                    <i class="fas fa-calendar-alt card-icon planned-icon"></i>
+                </div>
+                <div class="card">
+                    <h2>Drone În Mentenanță</h2>
+                    <p class="metric-value">3</p>
+                    <i class="fas fa-wrench card-icon maintenance-icon"></i>
+                </div>
+                <div class="card">
+                    <h2>Media Durată Misiune</h2>
+                    <p class="metric-value">45.18 min</p>
+                    <i class="fas fa-clock card-icon time-icon"></i>
+                </div>
+            </section>
+            
+            <section class="data-tables">
+                <h2>Misiuni Recente (Status: Planificată)</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>MissionID</th>
+                            <th>DroneID</th>
+                            <th>Model</th>
+                            <th>Tip Misiune</th>
+                            <th>Start Timp</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td>11</td><td>Model_11</td><td>livrare</td><td>2025-05-20 17:32</td><td>planificată</td></tr>
+                        <tr><td>2</td><td>1</td><td>Model_1</td><td>livrare</td><td>2025-05-20 17:32</td><td>planificată</td></tr>
+                        <tr><td>50</td><td>5</td><td>Model_5</td><td>livrare</td><td>2025-05-20 17:32</td><td>planificată</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>
+
+        <section id="drones" class="placeholder-section">
+            <h2>Gestiune Drone (Detaliu)</h2>
+            <p>Aceasta este secțiunea unde veți adăuga formularele și tabelele pentru gestionarea detaliată a dronelor (ID, Model, MaxPayload, Status, etc., conform bazei de date).</p>
+        </section>
+        
+        <section id="missions" class="placeholder-section">
+            <h2>Programare Misiuni (Detaliu)</h2>
+            <p>Aceasta este secțiunea unde veți programa misiuni noi (MissionType, StartLocation, EndLocation, DroneID, etc.).</p>
+        </section>
+        
+         <section id="maintenance" class="placeholder-section">
+            <h2>Mentenanță (Istoric și Programare)</h2>
+            <p>Aici veți vizualiza istoricul intervențiilor și veți programa mentenanța viitoare (conform tabelei Maintenance din baza de date).</p>
+        </section>
+
+        </div>
+</body>
+</html>
