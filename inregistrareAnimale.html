@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formular de înregistrare animale</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="formular-container">
+        <h1>Formular de înregistrare animale</h1>        
+        <form>
+            <label>Nume stăpân</label>
+            <input type="text" name="numeStapan">
+
+            <label>Telefon</label>
+            <input type="text" name="telefon">
+
+            <label>Nume animal</label>
+            <input type="text" name="numeAnimal">
+
+            <label>Specie</label>
+            <select name="specie">
+                <option>Câine</option>
+                <option>Pisică</option>
+                <option>Iepure</option>
+                <option>Altul</option>
+            </select>
+
+            <label>Sexul animalului</label>
+            <div class="radio-group">
+                <label><input type="radio" name="sex"> Mascul</label>
+                <label><input type="radio" name="sex"> Femelă</label>
+            </div>
+
+            <label>Servicii dorite</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="servicii"> Vaccinare</label>
+                <label><input type="checkbox" name="servicii"> Deparazitare</label>
+                <label><input type="checkbox" name="servicii"> Consult</label>
+            </div>
+
+            <label>Observații</label>
+            <textarea name="observatii" rows="3" placeholder="Introduceți observații..."></textarea>
+
+            <div class="buttons">
+                <button type="submit">Trimite</button>
+                <button type="reset">Resetează</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
