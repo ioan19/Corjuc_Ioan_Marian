@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DroneFleet Manager - Gestiune Drone</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="dashboard-layout">
+    
+    <div class="top-bar-dashboard">
+        <div class="logo">DroneFleet 🚀</div>
+        <nav>
+            <ul class="dashboard-nav-links">
+                <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="users.html"><i class="fas fa-users"></i> Utilizatori & Operatori</a></li>
+                <li class="active"><a href="drones.html"><i class="fas fa-plane"></i> Gestiune Drone</a></li>
+                <li><a href="missions.html"><i class="fas fa-route"></i> Programare Misiuni</a></li>
+                <li><a href="maintenance.html"><i class="fas fa-tools"></i> Mentenanță</a></li>
+                <li><a href="locations.html"><i class="fas fa-map-marker-alt"></i> Locații Bază</a></li>
+            </ul>
+        </nav>
+        <div class="user-controls-top">
+             <div class="user-info-top">
+                <i class="fas fa-user-circle"></i>
+                <span class="user-role">Administrator</span>
+            </div>
+             <a href="index.html" class="logout-top-button" title="Deconectare">
+                <i class="fas fa-sign-out-alt"></i> Deconectare
+            </a>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <section id="drones">
+            <header class="dashboard-header"><h1>Gestiunea Flotei de Drone</h1></header>
+            <p>Vizualizați specificațiile tehnice, starea bateriei și istoricul de zbor al fiecărei drone înregistrate în sistem. Aici veți adăuga formularele și tabelele pentru gestionarea detaliată a dronelor (ID, Model, MaxPayload, Status).</p>
+        </section>
+    </div>
+</body>
+</html>
