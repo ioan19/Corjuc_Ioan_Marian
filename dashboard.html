@@ -9,30 +9,31 @@
 </head>
 <body class="dashboard-layout"> 
     
-    <div class="sidebar">
+    <div class="top-bar-dashboard">
+        
         <div class="logo">DroneFleet 🚀</div>
+
         <nav>
-            <ul>
-                <li class="active"><a href="#dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
-                <li><a href="#users"><i class="fas fa-users"></i> Utilizatori & Operatori</a></li>
-                <li><a href="#drones"><i class="fas fa-plane"></i> Gestiune Drone</a></li>
-                <li><a href="#missions"><i class="fas fa-route"></i> Programare Misiuni</a></li>
-                <li><a href="#maintenance"><i class="fas fa-tools"></i> Mentenanță</a></li>
-                <li><a href="#locations"><i class="fas fa-map-marker-alt"></i> Locații Bază</a></li>
+            <ul class="dashboard-nav-links">
+                <li class="active"><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="users.html"><i class="fas fa-users"></i> Utilizatori & Operatori</a></li>
+                <li><a href="drones.html"><i class="fas fa-plane"></i> Gestiune Drone</a></li>
+                <li><a href="missions.html"><i class="fas fa-route"></i> Programare Misiuni</a></li>
+                <li><a href="maintenance.html"><i class="fas fa-tools"></i> Mentenanță</a></li>
+                <li><a href="locations.html"><i class="fas fa-map-marker-alt"></i> Locații Bază</a></li>
             </ul>
         </nav>
         
-        <div class="sidebar-footer">
-             <div class="user-info">
+        <div class="user-controls-top">
+             <div class="user-info-top">
                 <i class="fas fa-user-circle"></i>
                 <span class="user-role">Administrator</span>
             </div>
-             <a href="index.html" class="logout-sidebar-button" title="Deconectare">
+             <a href="index.html" class="logout-top-button" title="Deconectare">
                 <i class="fas fa-sign-out-alt"></i> Deconectare
             </a>
         </div>
     </div>
-
     <div class="main-content">
         
         <section id="dashboard">
@@ -86,21 +87,6 @@
             </section>
         </section>
 
-        <section id="drones" class="placeholder-section">
-            <h2>Gestiune Drone (Detaliu)</h2>
-            <p>Aceasta este secțiunea unde veți adăuga formularele și tabelele pentru gestionarea detaliată a dronelor (ID, Model, MaxPayload, Status, etc., conform bazei de date).</p>
-        </section>
-        
-        <section id="missions" class="placeholder-section">
-            <h2>Programare Misiuni (Detaliu)</h2>
-            <p>Aceasta este secțiunea unde veți programa misiuni noi (MissionType, StartLocation, EndLocation, DroneID, etc.).</p>
-        </section>
-        
-         <section id="maintenance" class="placeholder-section">
-            <h2>Mentenanță (Istoric și Programare)</h2>
-            <p>Aici veți vizualiza istoricul intervențiilor și veți programa mentenanța viitoare (conform tabelei Maintenance din baza de date).</p>
-        </section>
-
-        </div>
+    </div> 
 </body>
 </html>
