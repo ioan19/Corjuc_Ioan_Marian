@@ -34,15 +34,33 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: #003366;
-    padding: 15px 50px;
+    padding: 10px 50px; /* Am redus putin padding-ul vertical pentru a acomoda logo-ul */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.top-nav .logo {
-    color: #3498db;
-    font-size: 1.8em;
-    font-weight: bold;
+/* --- STILURI NOI PENTRU LOGO --- */
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
 }
+
+.logo a {
+    display: block;
+    text-decoration: none;
+}
+
+.logo img {
+    height: 90px; /* Înălțimea logo-ului */
+    width: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05); /* Efect subtil de zoom la hover */
+}
+/* ------------------------------- */
 
 .main-menu ul {
     list-style: none;
@@ -358,12 +376,10 @@ body {
 /* ------------------------------------------------ */
 
 .dashboard-layout {
-    /* Nu mai este display: flex; aici, body deja îl gestionează */
     min-height: 100vh;
     flex-grow: 1;
 }
 
-/* NOU: Containerul principal care înlocuiește sidebar-ul lateral */
 .top-bar-dashboard { 
     display: flex;
     justify-content: space-between;
@@ -375,12 +391,7 @@ body {
     flex-shrink: 0; 
 }
 
-.top-bar-dashboard .logo {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #3498db;
-    margin-right: 30px;
-}
+/* Selectorul .top-bar-dashboard .logo moștenește acum stilurile generale .logo definite mai sus */
 
 .dashboard-nav-links {
     display: flex;
@@ -444,12 +455,10 @@ body {
     background-color: #c0392b;
 }
 
-/* Eliminăm stilurile vechi de sidebar și footer-ul sidebar-ului */
 .sidebar, .sidebar-footer, .user-info, .logout-sidebar-button {
     display: none !important;
 }
 
-/* 2. CONȚINUTUL PRINCIPAL (MAIN-CONTENT) */
 .main-content {
     flex-grow: 1;
     padding: 20px 30px;
