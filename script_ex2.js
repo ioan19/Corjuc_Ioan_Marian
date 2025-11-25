@@ -1,14 +1,27 @@
-let tranzactie1 = true;
-let tranzactie2 = false;
+const luni = [
+    "Ianuarie", "Februarie", "Martie", "Aprilie", "Mai", "Iunie",
+    "Iulie", "August", "Septembrie", "Octombrie", "Noiembrie", "Decembrie"
+];
 
-console.log("Test IF (tranzactie1)");
-if (tranzactie1) {
-    console.log("Tranzactie acceptata!");
-}
+const divDetalii = document.getElementById('detalii');
+const btnDetalii = document.getElementById('btnDetalii');
+const spanData = document.getElementById('dataProdus');
 
-console.log("\n Test (tranzactie2)");
-if (tranzactie2) {
-    console.log("Tranzactie acceptata!"); 
+divDetalii.classList.add('ascuns');
+
+const dataCurenta = new Date();
+const ziua = dataCurenta.getDate();
+const luna = luni[dataCurenta.getMonth()];
+const anul = dataCurenta.getFullYear();
+
+spanData.textContent = `${ziua} ${luna} ${anul}`;
+
+btnDetalii.addEventListener('click', function() {
+    divDetalii.classList.toggle('ascuns');
+
+    if (divDetalii.classList.contains('ascuns')) {
+        btnDetalii.textContent = "Afișează detalii";
     } else {
-            console.log("Tranzactie refuzata!");
-        }
+        btnDetalii.textContent = "Ascunde detalii";
+    }
+});
