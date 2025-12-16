@@ -1,0 +1,48 @@
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Despre Noi - DroneFleet Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="logo">
+            <a href="home.php">
+                <img src="logo1.png" alt="DroneFleet Manager Logo">
+            </a>
+        </div>
+        <nav class="main-menu">
+            <ul>
+                <li><a href="home.php">Acasă</a></li>
+                <li><a href="about.php" class="active">Despre Noi</a></li>
+                <li><a href="contact.php">Contact</a></li>
+                <?php if (isset($_SESSION['user_id'])): ?>
+                    <li><a href="dashboard.php" class="cta-button">Dashboard</a></li>
+                <?php else: ?>
+                    <li><a href="index.php" class="cta-button">Intră în Sistem (Login)</a></li>
+                <?php endif; ?>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <h1>Viziunea DroneFleet Manager</h1>
+        <p>Suntem dedicați optimizării operațiunilor cu drone, oferind o platformă robustă care asigură conformitatea, siguranța și eficiența misiunilor de livrare, inspecție și cartografiere.</p>
+        
+        <section class="about-section">
+            <h2>Misiunea Noastră</h2>
+            <p>Dezvoltăm soluții software de ultimă generație pentru gestionarea flotelor UAV, punând accent pe scalabilitate, securitate cibernetică și integrare facilă cu sistemele logistice existente. Obiectivul nostru este de a transforma operațiunile aeriene în procese complet autonome și predictibile.</p>
+        </section>
+    </main>
+    
+    <footer class="site-footer">
+        <p>&copy; 2025 DroneFleet Manager. Toate drepturile rezervate. Contact: <a href="mailto:support@dronefleet.com">support@dronefleet.com</a></p>
+    </footer>
+</body>
+</html>
